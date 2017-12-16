@@ -3,7 +3,7 @@
 # Run thi son the host, noth within the docker image, then connect
 # http://localhost:4000
 
-tag=simple_py_web
+source config
 
 docker run -p 4000:80 $tag &
 
