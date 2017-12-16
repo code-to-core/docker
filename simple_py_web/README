@@ -1,0 +1,3 @@
+build the image using the build script
+when the image is built use the run.sh and stop.sh scripts to control it.
+Connect to the running image using http://localhost:4000
