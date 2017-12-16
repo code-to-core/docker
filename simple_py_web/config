@@ -1,1 +1,5 @@
 tag=simple_py_web
+docker_id=pw1326
+version=1.0.0
+
+publish_as=$docker_id/$tag:$version
