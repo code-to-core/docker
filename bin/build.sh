@@ -8,5 +8,6 @@ then
 fi
 
 source config
-echo $tag
-docker build -t $tag .
+echo $repository
+docker build -t $repository .
+docker tag $repository $publish_as

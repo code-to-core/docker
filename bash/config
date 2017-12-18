@@ -1,0 +1,7 @@
+repository=ubuntu
+docker_id=pw1326
+tag=16.04
+
+publish_as=$repository:$tag
+run_args="-ti --rm"
+cmd="/bin/bash"

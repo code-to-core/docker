@@ -12,8 +12,14 @@ fi
 
 source config
 
-id=$(docker container ls | grep $tag | cut -d ' ' -f1)
+id=$(docker container ls | grep $repository | cut -d ' ' -f1)
 
-echo found $tag running with container id $id, attaching
+if [ -z "$id" ] 
+then
+	echo container for $repository was not found
+	exit 1
+fi
+
+echo found $repository running with container id $id, attaching
 
 docker exec -it $id bash

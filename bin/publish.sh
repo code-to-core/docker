@@ -15,6 +15,5 @@ then
 	exit $?
 fi
 
-docker tag $tag $publish_as
 
 docker push $publish_as

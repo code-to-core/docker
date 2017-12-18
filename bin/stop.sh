@@ -12,8 +12,8 @@ fi
 
 source config
 
-id=$(docker container ls | grep $tag | cut -d ' ' -f1)
+id=$(docker container ls | grep $repository | cut -d ' ' -f1)
 
-echo found $tag running with container id $id, stopping
+echo found $repository running with container id $id, stopping
 
 docker container stop $id
