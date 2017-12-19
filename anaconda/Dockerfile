@@ -18,11 +18,12 @@ RUN ( cd /home/anaconda && curl -sSL -o installer.sh https://repo.continuum.io/a
 	bash installer.sh -b -f && \
 	rm installer.sh )
 
+WORKDIR $HOME
+ADD --chown=anaconda app $HOME
 
 ENV PATH "$PATH:$HOME/anaconda3/bin"
 
-
-EXPOSE 8888 6006
+EXPOSE 8888
 VOLUME /notebooks
 WORKDIR "/notebooks"
 
