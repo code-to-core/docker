@@ -11,7 +11,7 @@ fi
 
 source config
 
-exec=$(echo docker run --init "$run_args" $publish_as "$cmd")
+exec=$(echo docker run "$run_args" $publish_as "$cmd")
 echo $exec
 $exec
 
