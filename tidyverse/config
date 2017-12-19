@@ -1,0 +1,6 @@
+repository=tidyverse
+docker_id=rocker
+tag=latest
+
+publish_as=$docker_id/$repository:$tag
+run_args="-d -p 8787:8787"

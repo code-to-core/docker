@@ -1,6 +1,0 @@
-repository=anaconda
-docker_id=pw1326
-tag=latest
-
-publish_as=$docker_id/$repository:$tag
-run_args="-p 8889:8888"

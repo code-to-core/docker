@@ -1,0 +1,7 @@
+repository=datascience-notebook
+docker_id=jupyter
+tag=latest
+
+publish_as=$docker_id/$repository:$tag
+run_args="-it --rm -p 8888:8888"
+cmd='start-notebook.sh --NotebookApp.password=sha1:efc87df824dd:e5687c11691b9f7df0bfa137e0707ed371b15fb5'

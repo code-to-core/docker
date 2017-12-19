@@ -1,0 +1,56 @@
+This is a set of scripts and utilities to make running Docker containers 
+fairly easy.
+
+The bin/ directory contains a number of utility scripts, described in detail 
+below. Other directories contain at least a config file to identify 
+images and arguments to run a container.
+
+On the host machine, cd into the required directory and run ../bin/run.sh. 
+The script will use the config file to start a docker image with the correct
+arguments.
+
+The config file just sets some shell variables used by the various scripts
+and the available values are listed below.
+
+Config File Variables
+=====================
+# Provide the locally tagged, or docker hub repository name, which can be 
+# prefixed by a docker account name, for example r-notebook
+repository=<repository name>
+
+# provide the docker_id under which the repository can be found
+docker_id=jupyter
+
+# The tag for the image
+tag=latest
+
+# options provided to docker in the run.sh, example shows port 8888
+run_args="-it --rm -p 8888:8888"
+
+# command provided to docker example shows the command that will be run
+cmd="start-notebook.sh"
+
+# Do not change this, it is constructted from the above variables
+publish_as=$docker_id/$repository:$tag
+
+
+Scripts
+=======
+
+attach.sh
+When run in a directory containing a config file, will find and attach
+a shell to a running container
+
+build.sh
+Builds an image from and Dockerfile in the directory and using the tags
+specified in the config file
+
+chkconfig.sh
+Helper script, just checks for the presence of the config file
+
+clean_all.sh
+Script to clean up hanging docker images/volumes/containers
+
+inspect.sh
+starts a shell in the container without running the designated application
+and allows you to poke around and troubleshoot
