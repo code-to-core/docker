@@ -12,6 +12,10 @@ arguments.
 The config file just sets some shell variables used by the various scripts
 and the available values are listed below.
 
+some of the examples are based on the Jupyter docker-stack, here:
+https://github.com/jupyter/docker-stacks
+
+
 Config File Variables
 =====================
 # Provide the locally tagged, or docker hub repository name, which can be 

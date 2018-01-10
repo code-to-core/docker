@@ -1,0 +1,7 @@
+repository=golang
+docker_id=library
+tag=latest
+
+publish_as=$docker_id/$repository:$tag
+run_args="-it --rm -v $PWD:$PWD -w $PWD"
+cmd=bash
